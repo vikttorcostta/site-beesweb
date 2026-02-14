@@ -709,7 +709,7 @@ ul {
 /** COMEÇO INTEGRATION **/
 
 .integrations-container {
-    background-image: url('/src/assets/images/element-background.png');
+    background-image: url('../images/element-background.png');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;

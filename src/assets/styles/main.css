@@ -1,0 +1,741 @@
+/*
+    Autor: Paulo Victor Costa de Melo
+    Data: 10/02/2026
+    Descrição: Projeto destina a prárica de desenvolvimento front-end, utilizando HTML, CSS e JavaScript para criar um site responsivo e moderno para a empresa Beesweb, que oferece soluções de software para provedores de internet. O site apresenta informações sobre os recursos, integrações, planos e preços da empresa, além de um formulário de contato para os visitantes.
+    Última modificação: 14/02/2026
+*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light dark;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --primary-yellow: #FFD100;
+    --secondary-yellow: #FFB703;
+    --soft-yellow: #FFF3B0;
+
+    --black-title: #0B0B0B;
+    --dark-gray: #2E2E2E;
+    --mid-gray: #6B6B6B;
+    --light-gray: #EAEAEA;
+
+    --white: #FFFFFF;
+    --off-white: #FFFDF7;
+    --bg-beige: #FFF7E0;
+
+    --honey-orange: #FF9F1C;
+    --bee-brown: #3A2A1A;
+}
+
+a {
+    color: #0B0B0B;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.divider {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+/** COMEÇO HEADER **/
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.151);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-logo {
+    width: 210px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-menu-link {
+    transition: 0.5s;
+    font-weight: 500;
+}
+
+.header-menu-link:hover {
+    color: var(--primary-yellow);
+    transition-duration: 0.5s;
+}
+
+
+#menu {
+    display: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 180px;
+    height: 55px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--black-title);
+}
+
+.btn-secondary {
+    background-color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 130px;
+    height: 55px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .header-menu {
+        display: none;
+    }
+
+    .btn-modal {
+        display: block;
+    }
+
+    .btn-primary {
+        display: none;
+    }
+
+    .btn-secondary {
+        display: none;
+    }
+
+    #menu {
+        cursor: pointer;
+        display: block;
+        color: #000;
+        font-size: 30px;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    #menu:hover {
+        color: var(--primary-yellow);
+        transition-duration: 0.4s;
+    }
+}
+
+/** COMEÇO HERO **/
+
+.hero-container {
+    background-image: url('/src/assets/images/bg-hive-bees.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 150px;
+}
+
+.hero-content>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-content>div>h1 {
+    font-size: 65px;
+    line-height: 1.1em;
+}
+
+.hero-content>div>p {
+    font-size: 19px;
+    line-height: 1.3em;
+    font-weight: 200;
+}
+
+.hero-image img {
+    width: 650px;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 18px;
+}
+
+.hero-text>h1>span {
+    color: var(--primary-yellow);
+}
+
+.customer-numbers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.customer-content>h3 {
+    font-size: 30px;
+}
+
+.customer-content>p {
+    font-size: 17px;
+}
+
+.fa-user {
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    background-color: var(--primary-yellow);
+    padding: 10px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .hero-container {
+        background-image: url('../../../public/images/bg-hive-bees.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        margin-top: 50px;
+    }
+
+    .hero-content>div>h1 {
+        font-size: 42px;
+        line-height: 1.1em;
+        text-align: center;
+    }
+
+    .hero-content>div>p {
+        font-size: 17px;
+        line-height: 1.3em;
+        font-weight: 200;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .banner-image {
+        width: 2rem;
+    }
+}
+
+/** COMEÇO RESOURCE **/
+
+
+.resources-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.resources-container>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 88px;
+    position: absolute;
+
+}
+
+.resources-container>div>img {
+    width: 250px;
+    transition: 0.3s;
+
+}
+
+.resources-container>div>img:hover {
+    transform: translateY(-18px);
+    transition-duration: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    .resources-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .resources-container>div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 22px;
+        position: absolute;
+
+    }
+
+    .resources-container>div>img {
+        width: 130px;
+    }
+}
+
+
+/** COMERÇO FEATURES **/
+
+.features-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 2000;
+    margin-top: 200px;
+}
+
+.features-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+    padding: 10px;
+}
+
+.features-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.features-item>img {
+    width: 50px;
+    animation: flutuante 3s ease-in-out infinite;
+}
+
+.features-item>div>h3 {
+    font-size: 19px;
+    line-height: 1.0;
+}
+
+.features-item>div>p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@keyframes flutuante {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .features-container {
+        margin-top: 100px;
+    }
+
+    .features-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .features-item {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/** COMERÇO VÍDEO **/
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.video-item>img {
+    width: 800px;
+    border-radius: 10px;
+    display: block;
+}
+
+.video-item::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -120%;
+    width: 70%;
+    height: 180%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.15) 35%,
+            rgba(255, 255, 255, 0.45) 50%,
+            rgba(255, 255, 255, 0.15) 65%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(25deg);
+    animation: reflexo 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes reflexo {
+    0% {
+        left: -120%;
+    }
+
+    100% {
+        left: 140%;
+    }
+}
+
+@media (max-width: 798px) {
+    .video-item>img {
+        width: 358px;
+    }
+}
+
+/** COMEÇO COMPANIES **/
+
+.companies-container {
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.companies-item {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+}
+
+.companies-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px;
+}
+
+.companies-text>h3 {
+    font-size: 45px;
+}
+
+.companies-text>p {
+    font-size: 18px;
+    color: var(--mid-gray);
+}
+
+.companies-track {
+    display: flex;
+    width: max-content;
+    animation: slide 20s linear infinite;
+}
+
+.companies-logo {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding-right: 80px;
+}
+
+.companies-logo img {
+    height: 50px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.companies-logo img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-40%);
+    }
+}
+
+/** COMEÇO RESPONSIVE **/
+
+.responsive-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 100px;
+
+}
+
+.responsive-image>img {
+    width: 786px;
+}
+
+.responsive-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 58px;
+}
+
+.responsive-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 10px;
+}
+
+.responsive-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.responsive-titles>h1 {
+    font-size: 45px;
+    line-height: 1.1;
+}
+
+.responsive-titles>p {
+    font-size: 18px;
+    color: var(--mid-gray);
+}
+
+.responsive-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.responsive-text>ul>li {
+    display: flex;
+    flex-direction: column;
+}
+
+.responsive-text>ul>li>div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 9px;
+}
+
+.responsive-text>ul>li>div>i {
+    font-size: 28px;
+}
+
+.responsive-text>ul>li>div>h3 {
+    font-size: 22px;
+}
+
+.responsive-text>ul>li>span {
+    text-align: start;
+    line-height: 1.2;
+}
+
+.responsive-text>ul>li {
+    display: flex;
+    gap: 4px;
+}
+
+.responsive-text>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+}
+
+@media (max-width: 768px) {
+    .responsive-main {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .responsive-image>img {
+        width: 550px;
+        padding: 25px;
+    }
+}
+
+/** COMEÇO INTEGRATION **/
+
+.integrations-container {
+    background-image: url('/src/assets/images/element-background.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px
+}
+
+.integrations-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.3;
+    gap: 15px;
+    position: relative;
+    margin-top: 250px;
+}
+
+.integrations-absolute {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+}
+
+.integrations-absolute>h1 {
+    font-size: 40px;
+}
+
+.integrations-absolute>p {
+    font-size: 18px;
+    color: var(--mid-gray);
+}
+
+.integrations-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.integrations-element-image {
+    margin-top: 150px;
+}
+
+.integrations-element-image>img {
+    width: 500px;
+}
+
+@media (max-width: 768px) {
+
+    .integrations-container {
+        width: 100%;
+    }
+
+    .integrations-text {
+        margin-top: 150px;
+    }
+
+    .integrations-element-image {
+        margin-top: 100px;
+    }
+
+    .integrations-element-image>img {
+        width: 350px;
+    }
+
+}

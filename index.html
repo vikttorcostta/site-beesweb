@@ -1,0 +1,295 @@
+<!-- 
+    Autor: Paulo Victor Costa de Melo
+    Data: 10/02/2026
+    Descrição: Projeto destina a prárica de desenvolvimento front-end, utilizando HTML, CSS e JavaScript para criar um site responsivo e moderno para a empresa Beesweb, que oferece soluções de software para provedores de internet. O site apresenta informações sobre os recursos, integrações, planos e preços da empresa, além de um formulário de contato para os visitantes.
+    Última modificação: 14/02/2026
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a4c1a13a03.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/assets/styles/main.css">
+    <title>Beesweb</title>
+</head>
+
+<body>
+
+    <head>
+        <nav id="header-menu" class="header-container">
+            <img class="header-logo" src="./src/assets/images/logo_bees.png" alt="">
+            <i id="menu" class="fa-solid fa-bars"></i>
+            <ul class="header-menu">
+                <a class="header-menu-link" href="#">
+                    <li>Recursos</li>
+                </a>
+                <a class="header-menu-link" href="#">
+                    <li>API e Integrações</li>
+                </a>
+                <a class="header-menu-link" href="#">
+                    <li>Planos e Recursos</li>
+                </a>
+                <a class="header-menu-link" href="#">
+                    <li>Planos e Preços</li>
+                </a>
+                <a class="header-menu-link" href="#">
+                    <li>Dúvidas Frequentes</li>
+                </a>
+            </ul>
+            <div class="btn-container">
+                <a class="btn-primary" href="#">
+                    <p>Testar 14 dias grátis</p>
+                </a>
+                <a class="btn-secondary" href="#">
+                    <p>Acessar painel</p>
+                </a>
+            </div>
+        </nav>
+    </head>
+    <main>
+        <!-- HERO -->
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Ganhe tempo e tenha <br> mais liberdade em <br> seu provedor</h1>
+                    <p class="hero-subtitle">Com o Beesweb você automatiza os processos do seu <br> provedor de internet
+                        e tem
+                        ele na palma da sua mão.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="#">
+                            <p>Testar 14 dias grátis</p>
+                        </a>
+                        <div class="customer-numbers">
+                            <i id="user-icon" class="fa-regular fa-user"></i>
+                            <div class="customer-content">
+                                <h3>+5.000</h3>
+                                <p>Em todo o Brasil</p>
+                            </div>
+                        </div>
+                        <div class="customer-numbers">
+                            <i id="user-icon" class="fa-regular fa-user"></i>
+                            <div class="customer-content">
+                                <h3>+5.000</h3>
+                                <p>Em todo o Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+                <img class="banner-image" src="./src/assets/images/hero-image.png" alt="Hero Beesweb">
+            </div>
+        </div>
+        <!-- FIM HERO -->
+
+        <!-- RESOURCES -->
+        <div class="resources-container">
+            <div>
+                <img src="./src/assets/images/selo-redes.png" alt="">
+                <img src="./src/assets/images/selo-monitoramento.png" alt="">
+                <img src="./src/assets/images/selo-financeiro.png" alt="">
+            </div>
+        </div>
+
+        <!-- FIM RESOURCES -->
+
+        <!-- FEATURES -->
+        <div class="features-container">
+            <div class="features-content">
+                <div class="features-item">
+                    <img class="icon-features" src="./src/assets/images/icon-autonomia.png" alt="">
+                    <div>
+                        <h3>Autonomia</h3>
+                        <p>Emita carnês de forma automática</p>
+                    </div>
+                </div>
+
+                <div class="features-item">
+                    <img class="icon-features" src="./src/assets/images/icon-chamados.png" alt="">
+                    <div>
+                        <h3>Chamados</h3>
+                        <p>Controle de ordens de serviço</p>
+                    </div>
+                </div>
+
+                <div class="features-item">
+                    <img class="icon-features" src="./src/assets/images/icon-bloqueio.png" alt="">
+                    <div>
+                        <h3>Bloqueio automático</h3>
+                        <p>Controle de inadimplência</p>
+                    </div>
+                </div>
+
+                <div class="features-item">
+                    <img class="icon-features" src="./src/assets/images/icon-visao-360.png" alt="">
+                    <div>
+                        <h3>Visão 360</h3>
+                        <p>Gestão de controle de estoque</p>
+                    </div>
+                </div>
+
+                <div class="features-item">
+                    <img class="icon-features" src="./src/assets/images/icon-disparo-avisos.png" alt="">
+                    <div>
+                        <h3>Disparo de avisos</h3>
+                        <p>Vencimento de cobranças</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM FEATURES -->
+
+        <di class="divider">
+            </div>
+
+            <!-- VIDEO -->
+            <div class="video-container">
+                <div class="video-item">
+                    <img src="./src/assets/images/video-cover.png" alt="">
+                </div>
+            </div>
+            <di class="divider">
+                </div>
+                <!-- FIM VIDEO -->
+
+                <!-- COMPANIES -->
+                <div class="companies-container">
+                    <div class="companies-text">
+                        <h3>Integrações</h3>
+                        <p>Contamos com as principais integrações do mercado</p>
+                    </div>
+
+                    <div class="companies-item">
+                        <div class="companies-track">
+
+                            <div class="companies-logo">
+                                <img src="./src/assets/images/mikrotik-logo-gray.png" alt="">
+                                <img src="./src/assets/images/santander-logo-gray.png" alt="">
+                                <img src="./src/assets/images/huawai-logo-gray 1.png" alt="">
+                                <img src="./src/assets/images/santander-logo-gray.png" alt="">
+                            </div>
+
+                            <div class="companies-logo">
+                                <img src="./src/assets/images/widepay-logo-gray.png" alt="">
+                                <img src="./src/assets/images/galaxpay-logo-gray.png" alt="">
+                                <img src="./src/assets/images/efi-logo-gray.png" alt="">
+                                <img src="./src/assets/images/cora-logo-gray-1.png" alt="">
+                            </div>
+
+                            <div class="companies-logo">
+                                <img src="./src/assets/images/banco-do-brasil-logo-gray.png" alt="">
+                                <img src="./src/assets/images/vsol-logo-gray-1.png" alt="">
+                                <img src="./src/assets/images/iugu-logo-gray.png" alt="">
+                                <img src="./src/assets/images/asaas-logo-gray.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM COMPANIES -->
+
+                <!-- RESPONSIVE -->
+                <div class="responsive-container">
+                    <div class="responsive-content">
+                        <div class="responsive-titles">
+                            <h1>100% compatível com o seu negócio</h1>
+                            <p>Plataforma intuitiva e fácil de utilizar no dia-a-dia.</p>
+                        </div>
+                        <div class="responsive-main">
+                            <div class="responsive-image">
+                                <img src="./src/assets/images/image-responsive-phone.png" alt="">
+                            </div>
+                            <div class="responsive-text">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <h3>Na palma da sua mão</h3>
+                                        </div>
+                                        <span>
+                                            Administre, monitore e acompanhe seu provedor de forma prática a qualquer
+                                            momento.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <h3>Na palma da sua mão</h3>
+                                        </div>
+                                        <span>
+                                            Administre, monitore e acompanhe seu provedor de forma prática a qualquer
+                                            momento.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <h3>Sistema 100% online</h3>
+                                        </div>
+                                        <span>
+                                            Acesse de qualquer dispositivo móvel via conexão wifi ou dados com baixo
+                                            consumo de
+                                            banda.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <h3>Responsividade</h3>
+                                        </div>
+                                        <span>
+                                            Compatível com qualquer dispositivo móvel e desktop, fácil navegação e pouco
+                                            consumo.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <h3>Atualizações Constantes</h3>
+                                        </div>
+                                        <span>
+                                            Plataforma sempre atualizada de acordo com as necessidades e solicitações
+                                            dos nossos
+                                            clientes.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIM RESPONSIVE -->
+
+                <!-- INTEGRATIONS -->
+                <div class="integrations-container">
+                    <div class="integrations-content">
+                        <div class="integrations-text">
+                            <div class="integrations-absolute">
+                                <h1>API + Integrações</h1>
+                                <p>Acreditamos que todo minuto de desenvolvimento é precioso. Por isso, criamos nossa
+                                    API com
+                                    foco em
+                                    <br>agilidade
+                                    de desenvolvimento, segurança, performance e manutenção descomplicada.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="integrations-element-image">
+                            <img src="./src/assets/images/element-server-3d.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIM INTEGRATIONS -->
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

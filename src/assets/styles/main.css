@@ -39,6 +39,9 @@
     --honey-orange: #FF9F1C;
     --bee-brown: #3A2A1A;
 }
+body {
+    background-color: var(--white);
+}
 
 a {
     color: #0B0B0B;

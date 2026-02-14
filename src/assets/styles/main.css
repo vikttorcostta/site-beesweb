@@ -174,7 +174,7 @@ ul {
 /** COMEÇO HERO **/
 
 .hero-container {
-    background-image: url('/src/assets/images/bg-hive-bees.png');
+    background-image: url('../images/bg-hive-bees.png');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -249,7 +249,7 @@ ul {
 
 @media (max-width: 768px) {
     .hero-container {
-        background-image: url('../../../public/images/bg-hive-bees.png');
+        background-image: url('../images/bg-hive-bees.png');
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;
@@ -484,7 +484,7 @@ ul {
 
 @media (max-width: 798px) {
     .video-item>img {
-        width: 358px;
+        width: 480px;
     }
 }
 
@@ -657,7 +657,7 @@ ul {
     }
 
     .responsive-image>img {
-        width: 550px;
+        width: 530px;
         padding: 25px;
     }
 }

@@ -204,7 +204,7 @@ ul {
 }
 
 .hero-image img {
-    width: 650px;
+    width: 500px;
     max-width: 100%;
     height: auto;
 }
@@ -244,6 +244,33 @@ ul {
     background-color: var(--primary-yellow);
     padding: 10px;
     text-align: center;
+}
+
+.avatar-container-relative {
+    position: relative;
+}
+
+.avatar-container-relative>img {
+    width: 190px;
+    margin-top: 250px;
+    margin-left: -50px;
+    position: absolute;
+}
+
+.avatar-container-relative {
+    animation: flutuante 3s ease-in-out infinite;
+}
+
+
+.bee-container-relative {
+    position: relative;
+}
+
+.bee-container-relative>img {
+    width: 240px;
+    margin-top: 430px;
+    margin-left: 300px;
+    position: absolute;
 }
 
 
@@ -294,6 +321,23 @@ ul {
     .banner-image {
         width: 2rem;
     }
+
+    .bee-container-relative>img {
+        width: 240px;
+        margin-top: 380px;
+        margin-left: 220px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .avatar-container-relative>img {
+        width: 190px;
+        margin-top: 250px;
+        margin-left: 8px;
+        position: absolute;
+    }
+
+
 }
 
 /** COMEÇO RESOURCE **/

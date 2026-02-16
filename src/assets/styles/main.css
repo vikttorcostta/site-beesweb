@@ -120,12 +120,18 @@ ul {
     align-items: center;
     justify-content: center;
     padding: 12px;
-    width: 180px;
+    width: 220px;
     height: 55px;
     border-radius: 8px;
     font-size: 15px;
     text-align: center;
     color: var(--black-title);
+    transition: 0.4s;
+}
+
+.btn-primary:hover {
+    transition-duration: 0.4s;
+    transform: translateY(-8px);
 }
 
 .btn-secondary {
@@ -140,6 +146,12 @@ ul {
     font-size: 15px;
     text-align: center;
     color: var(--white);
+    transition: 0.4s;
+}
+
+.btn-secondary:hover {
+    transition-duration: 0.4s;
+    transform: translateY(-8px);
 }
 
 @media (max-width: 768px) {
@@ -974,5 +986,70 @@ ul {
     .plans-content {
         flex-direction: column;
         text-align: start;
+    }
+}
+
+/** COMEÇO MIGRATIONS **/
+
+.migrations-container {
+    width: 100%;
+    background-image: url('../images/grid-background.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 950px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px
+}
+
+.migrations-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 25px;
+}
+
+.migrations-content>div>img {
+    width: 530px;
+}
+
+.migrations-content>.migrations-text>div>h1 {
+    font-size: 40px;
+}
+
+.migrations-content>.migrations-text>div>p {
+    font-size: 20px;
+}
+
+.migrations-text {
+    width: 500px;
+}
+
+.migrations-text>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+@media (max-width:768px) {
+
+    .migrations-content {
+        flex-direction: column;
+    }
+
+    .migrations-text {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .migrations-content>div>img {
+        width: 450px;
     }
 }

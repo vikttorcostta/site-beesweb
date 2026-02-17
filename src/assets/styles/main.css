@@ -1062,8 +1062,7 @@ ul {
     display: flex;
     align-items: center;
     background-color: #FFF9E0;
-    justify-content: space-between;
-    padding: 30px;
+    justify-content: space-evenly;
 }
 
 .testimonials-content-1 {
@@ -1094,6 +1093,7 @@ ul {
 }
 
 .testimonials-texts {
+    width: 580px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -1109,7 +1109,7 @@ ul {
 }
 
 .card {
-    width: 350px;
+    width: 320px;
     height: 220px;
     background-color: #FFFFFF;
     display: flex;

@@ -1053,3 +1053,41 @@ ul {
         width: 450px;
     }
 }
+
+/** INÍCIO TESTIMONIALS **/
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFF9E0;
+    height: 800px;
+}
+
+.testimonials-item {
+    margin-left: 300px;
+    margin-top: -200px;
+    position: absolute;
+}
+
+.testimonials-item > img {
+    width: 600px;
+    border-radius: 10px 10px 10px 120px;
+}
+
+.testimonials-item > span {
+    position: relative;
+}
+
+.testimonials-item > span > h1 {
+    font-size: 40px;
+    text-align: start;
+    position: absolute;
+    margin-left: 630px;
+}
+
+.testimonials-item > span > img {
+    width: 88px;
+    position: absolute;
+    margin: -13px;
+}

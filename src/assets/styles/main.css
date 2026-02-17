@@ -1346,6 +1346,7 @@ footer {
 }
 
 .footer-contact {
+    width: 1400px;
     display: flex;
     align-items: center;
     justify-content: center;
